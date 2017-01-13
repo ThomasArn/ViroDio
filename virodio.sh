@@ -113,16 +113,16 @@ echo $fil1
 echo $fil2
 echo $fil3
 
-$megahit./megahit --presets meta-sensitive --min-contig-len 100 -1 $fil1 -2 $fil2 -r $fil3 -o $outdir/4_megahit/$bsname\_2
+$megahit./megahit --presets meta-sensitive --min-contig-len 100 -1 $fil1 -2 $fil2 -r $fil3 -o $outdir/4_megahit/$bsname
 
 
 ###################################
 ## Do BLASTn fo classification
 ###############################
 mkdir $outdir/5_blast/
-$blastn./blastn -outfmt 6 -num_threads 16 -query $outdir/4_megahit/$bsname\_2/final.contigs.fa -out $outdir/5_blast/$bsname\_2.tsv -db $blastn_db
+$blastn./blastn -outfmt 6 -num_threads 16 -query $outdir/4_megahit/$bsname/final.contigs.fa -out $outdir/5_blast/$bsname.tsv -db $blastn_db
 
-perl $krona/ImportBLAST.pl $outdir/5_blast/$bsname\_2.tsv -o $outdir/5_blast/$bsname\_2.test.krona.html
+perl $krona/ImportBLAST.pl $outdir/5_blast/$bsname.tsv -o $outdir/5_blast/$bsname.test.krona.html
 
 
 ###################################
