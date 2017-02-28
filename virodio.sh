@@ -4,24 +4,24 @@
 # Virus discovery using Illumina sequencing can be dependent on few reads or small contigs with low homology to known references. This is a wrapper that uses different availble search tools (Kaiju, kraken, blastn and diamond) for explorative virus discovery. The translated searches are usually used in virus discovery to give higher sensitivity.
 
 #variables of tools
-trim_galore=/data/data2/bin/trim_galore/
-bowtie2=/data/data5/Projects/thomas/bin/bowtie2-2.2.9/
-kraken=/data/data2/bin/kraken/
-krona=/data/data5/Projects/thomas/bin/Krona/KronaTools/scripts/
-kaiju=/data/data5/Projects/thomas/bin/kaiju/bin/
-megahit=/data/data5/Projects/thomas/bin/megahit/
-blastn=/data/data2/bin/ncbi-blast-2.3.0+/bin/
-$diamond=""
+trim_galore=/path/to/trim_galore/
+bowtie2=/path/to/bowtie2-2.2.9/
+kraken=/path/to/kraken/
+krona=/path/to/Krona/KronaTools/scripts/
+kaiju=/path/to/kaiju/bin/
+megahit=/path/to/megahit/
+blastn=/path/to/ncbi-blast-2.3.0+/bin/
+$diamond=/path/to/diamond
 
 #database Variables:
 # bowtie2 database of host organism
-depletion_db=/data/data5/Projects/thomas/db/Bowtie2/hg/hg19/hg19
-kraken_db=/data/data2/bin/kraken/KrakenDB/
-kaiju_nodes=/data/data5/Projects/thomas/bin/kaiju/kaijudb/nodes.dmp
-kaiju_db=/data/data5/Projects/thomas/bin/kaiju/kaijudb/kaiju_db.fmi
-blastn_db=/data/data2/bin/ncbi-blast-2.3.0+/db/nt
+depletion_db=/path/to/db/Bowtie2/hg/hg19/hg19
+kraken_db=/path/to/kraken/KrakenDB/
+kaiju_nodes=/path/to/kaiju/kaijudb/nodes.dmp
+kaiju_db=/path/to/kaiju/kaijudb/kaiju_db.fmi
+blastn_db=/path/to/ncbi-blast-2.3.0+/db/nt
 # fasta for diamond database get it here : ftp://ftp.ncbi.nlm.nih.gov/blast/db/FASTA/nr.gz
-diamond_db=/data/data5/Projects/thomas/db/Diamond/nr.nowhite.dmnd
+diamond_db=/path/to/Diamond/nr.nowhite.dmnd
 
 ###################################
 ## Read in arguments
